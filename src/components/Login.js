@@ -13,11 +13,11 @@ class Login extends React.Component {
     }
 
     handleChangeEmail = e => {
-        this.setState({email: e.target.value});
+        this.setState({[e.target.name]: e.target.value});
     }
 
     handleChangePassword = e => {
-        this.setState({password: e.target.value});
+        this.setState({[e.target.name]: e.target.value});
     }
 
     render() {
@@ -29,11 +29,13 @@ class Login extends React.Component {
             <p style={{color: "red"}}>{this.state.message}</p>
 
                 <input type="text"
+                name="email"
                 onChange={this.handleChangeEmail}
                 value={this.state.email}
                 />
 
                 <input type="password"
+                name="password"
                 onChange={this.handleChangePassword}
                 value={this.state.password}
                 />
