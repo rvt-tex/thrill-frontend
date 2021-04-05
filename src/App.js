@@ -5,6 +5,11 @@ import Profile from "./components/Profile";
 import './App.css';
 
 function App() {
+
+  const handleLogout = () => {
+    localStorage.removeItem('jwt')
+  }
+
   return (
     
     <Router>
@@ -14,6 +19,8 @@ function App() {
           <Route path="/login" component={Login}/>
           <Route path="/profile" component={Profile}/>
         </switch>
+
+        <button onClick={handleLogout}>Log Out</button>
       </div>
     </Router>
     

@@ -44,8 +44,8 @@ class Profile extends React.Component {
 
 
 const mapStateToProps = state => {
-    const {client, reservation} = state 
-    
+    const {client, reservations} = state 
+
     return {
         client, reservations
     }
