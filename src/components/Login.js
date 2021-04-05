@@ -1,4 +1,6 @@
 import React from 'react';
+import { loginRequest} from '../services/Api';
+
 
 class Login extends React.Component {
 
@@ -10,6 +12,16 @@ class Login extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();
+        const {email, password} = this.state
+
+        loginRequest({email, password})
+        .then(res => {
+            if (res.error) {
+                this.setState({message: res.error})
+            }else {
+                localStorage.setItem('jwt', res.jwt)
+            }
+        })
     }
 
     handleChangeEmail = e => {
@@ -24,6 +36,7 @@ class Login extends React.Component {
         return (
             
             <div id=''>
+
             <form onSubmit={this.handleSubmit}>
 
             <p style={{color: "red"}}>{this.state.message}</p>
