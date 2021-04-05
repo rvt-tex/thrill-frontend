@@ -1,5 +1,20 @@
 import React from 'react';
 
+// class Profile extends React.Component {
+
+//     render() {
+//         return (
+//             <div>
+//                 <h1>Welcome to Five Star Tours Profile Page </h1>
+//             </div>
+//         )
+//     }
+
+
+
+// }
+
+  
 function Profile() {
     return (
       <>
@@ -7,5 +22,5 @@ function Profile() {
       </>
     );
 }
-  
+
 export default Profile;

@@ -1,11 +1,58 @@
 import React from 'react';
 
-function Login() {
-    return (
-      <>
-       <h1>Welcome to Five Star Tours Loin Page</h1>
-      </>
-    );
-}
+class Login extends React.Component {
+
+    state = {
+        email: "",
+        password: "",
+        message: ""
+    }
+
+    handleSubmit = e => {
+        e.preventDefault();
+    }
+
+    handleChangeEmail = e => {
+        this.setState({email: e.target.value});
+    }
+
+    handleChangePassword = e => {
+        this.setState({password: e.target.value});
+    }
+
+    render() {
+        return (
+            
+            <div id=''>
+            <form onSubmit={this.handleSubmit}>
+
+            <p style={{color: "red"}}>{this.state.message}</p>
+
+                <input type="text"
+                onChange={this.handleChangeEmail}
+                value={this.state.email}
+                />
+
+                <input type="password"
+                onChange={this.handleChangePassword}
+                value={this.state.password}
+                />
+
+                <input type="submit"
+                value="Login"
+                />
+            
+            </form> 
+
+            </div>
+
+        
+           
+        );
+    };
+
+};
+
+
   
 export default Login;
