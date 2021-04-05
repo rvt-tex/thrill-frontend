@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {profileRequest} from '../services/Api';
 import { getClient } from '../redux/actions/clientActions';
+import { getToken } from '../services/localSorage';
+import { Redirect } from 'react-router-dom';
 
 
 
@@ -24,6 +26,7 @@ class Profile extends React.Component {
     render() {
         return (
             <div>
+                {!getToken() ? <Redirect to='/login' /> : null}
                 <h1>Welcome to {this.state.first_name} Profile </h1>
             </div>
         )

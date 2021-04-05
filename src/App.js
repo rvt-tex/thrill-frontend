@@ -3,11 +3,12 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import './App.css';
+import { clearToken } from './services/localSorage';
 
 function App() {
 
   const handleLogout = () => {
-    localStorage.removeItem('jwt')
+    clearToken()
   }
 
   return (
