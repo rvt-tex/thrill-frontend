@@ -1,4 +1,6 @@
-import { combineReducer } from 'redux';
+import { combineReducers } from 'redux';
+import clientReducer from './clientReducer';
+import reservationsReducer from './reservationsReducer';
 
 
 
@@ -6,4 +8,4 @@ import { combineReducer } from 'redux';
 
 
 
-export default combineReducer({client: clientReducer, reservations: reservationsReducer});
+export default combineReducers({client: clientReducer, reservations: reservationsReducer});
