@@ -1,5 +1,8 @@
 import React from 'react';
-import {profileRequest} from '../services/Api'
+import { connect } from 'react-redux';
+import {profileRequest} from '../services/Api';
+import { getClient } from '../redux/actions/clientActions';
+
 
 
 class Profile extends React.Component {
@@ -39,4 +42,18 @@ class Profile extends React.Component {
 //     );
 // }
 
-export default Profile;
+
+const mapStateToProps = state => {
+    const {client, reservation} = state 
+    
+    return {
+        client, reservations
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        getClient
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps) (Profile);
