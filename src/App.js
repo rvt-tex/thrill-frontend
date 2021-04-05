@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import Profile from "./components/Profile";
 import './App.css';
 import { clearToken } from './services/localSorage';
+import Navbar from './components/Navbar';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
     <Router>
       <div className="App">
         <switch>
+          <Navbar />
           <Route exact path="/" component={Home}/>
           <Route path="/login" component={Login}/>
           <Route path="/profile" component={Profile}/>
