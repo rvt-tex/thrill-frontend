@@ -24,6 +24,7 @@ class Profile extends React.Component {
     }
 
     render() {
+        console.log(getToken)
         return (
             <div>
                 {!getToken() ? <Redirect to='/login' /> : null}
