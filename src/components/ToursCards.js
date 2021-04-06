@@ -9,7 +9,7 @@ function ToursCards() {
             <h1>Check out these Epic Adventures!</h1>
                 <div className='tour-cards-container'>
                     <div className='tour-cards-wrapper'>
-                        <ul className='tour-cards-items'>
+                        <ul className='cards-items'>
                             <CardItem
                                 title='Far East'
                                 src='http://things-to-do-in-jamaica.com/wp-content/uploads/2016/02/blue-lagoon-4.jpg'
