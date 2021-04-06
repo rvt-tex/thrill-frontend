@@ -29,6 +29,35 @@ function ToursCards() {
                                 path='/tours'
                             />
                         </ul>
+                        <ul className='cards-items'>
+            <CardItem
+              title='Ocho Rios Highlight'
+              src='https://media.tacdn.com/media/attractions-splice-spp-674x446/06/7b/27/89.jpg'
+              description='Explore breathe taking water falls and exotic trails '
+              duration='6-8 hours'
+              price='$150 per person'
+              label='Adventure'
+              path='/tours'
+            />
+            <CardItem
+             title='Negril Party Bus'
+             src='https://www.sandyhavenresort.com/wp-content/uploads/2019/06/ricks-cafe-blog-image.jpg'
+             description='Explore 7 miles of white sand beaches, then stop by ricks cafe for the sunset'
+             duration='6-8 hours'
+             price='$89 per person'
+             label='Adventure'
+             path='/tours'
+            />
+            <CardItem
+              title='Montego Bay Highlight'
+              src='https://travelaroundjamaicatours.files.wordpress.com/2014/09/pier_one_10bestdotcom.jpg'
+              description='Have best seafood in town on the peir while watching the sunset'
+              duration='4-6 hours'
+              price='$70 per person'
+              label='Adventure'
+              path='/tours'
+            />
+          </ul>
                     </div>
                 </div>
         </div>            
