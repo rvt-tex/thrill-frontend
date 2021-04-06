@@ -1,9 +1,13 @@
 import React from 'react';
+import {Button} from './Button';
+import MainSection from './MainSection';
 
 function Home() {
     return (
       <>
-       <h1>Welcome to Five Star Tours </h1>
+
+        <MainSection />
+       
       </>
     );
 }

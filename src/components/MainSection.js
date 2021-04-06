@@ -10,7 +10,7 @@ function MainSection() {
         <h1>WELCOME TO JA</h1>
         <p>Party Capital of the World</p>
 
-        <div className='hero-btns'>
+        <div className='main-btns'>
             <Button
                 className='btns'
                 buttonStyle='btn--outline'
