@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import { Button } from './Button';
 
 
 function Navbar() {
@@ -11,6 +12,20 @@ function Navbar() {
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
+
+    const showButton = () => {
+        if (window.innerWidth <= 960) {
+          setButton(false);
+        } else {
+          setButton(true);
+        }
+    };
+    
+    useEffect(() => {
+        showButton();
+      }, []);
+    
+      window.addEventListener('resize', showButton);
 
     return (
         <>
@@ -42,6 +57,7 @@ function Navbar() {
                             <Link to='/Profile' className='nav-links' onClick={closeMobileMenu}>Profile</Link>
                         </li>
                     </ul>
+                    {button && <Button buttonStyle='btn--outline'>Profile</Button>}
                 </div>
             </nav>
         </>

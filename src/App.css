@@ -7,8 +7,10 @@
 
 .home,
 .tours,
+.galleries,
 .reservations,
-.sign-up {
+.reviews,
+.profile {
   display: flex;
   height: 90vh;
   align-items: center;
@@ -34,7 +36,7 @@
   font-size: 100px;
 }
 
-.sign-up {
+.profile {
   /* background-image: url('../public/images/img-3.png'); */
   background-position: center;
   background-size: cover;
