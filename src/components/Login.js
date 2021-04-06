@@ -1,5 +1,6 @@
 import React from 'react';
 import { loginRequest} from '../services/Api';
+import './Login.css';
 
 
 
@@ -38,15 +39,28 @@ class Login extends React.Component {
             
             <div id=''>
 
+
+<h3 class="text-center text-white pt-5">Login form</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12"></div>
+
+
             <form onSubmit={this.handleSubmit}>
 
             <p style={{color: "red"}}>{this.state.message}</p>
 
+                
+            <div class="form-group">
                 <input type="text"
                 name="email"
                 onChange={this.handleChangeEmail}
                 value={this.state.email}
                 />
+            </div>
+
+<div class="form-group"><br></br>
 
                 <input type="password"
                 name="password"
@@ -54,11 +68,27 @@ class Login extends React.Component {
                 value={this.state.password}
                 />
 
+</div><br></br>
+
                 <input type="submit"
                 value="Login"
                 />
             
             </form> 
+
+
+            
+
+      
+
+            </div>
+            </div>
+        </div>
+    
+
+
+
+
 
             </div>
 
